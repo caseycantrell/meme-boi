@@ -6,8 +6,8 @@ export default function Header() {
         <div>
             <header className='header'>
                 <img src="./img/meme-face.png" className="header--image" alt="header" />
-                <h2 className='header--name'>Meme Boi</h2>
-                <h4 className='header--title'>Meme Generator</h4>
+                <h1 className='header--name'>Meme Boi</h1>
+                <h2 className='header--title'>Meme Generator</h2>
             </header>
            
         </div>
