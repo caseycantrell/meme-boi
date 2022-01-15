@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import memesData from "../assets/memesData";
 
-export default function Meme () {
+function Meme () {
 
     const [meme, setMeme] = useState({
         topText: "",
@@ -9,12 +9,17 @@ export default function Meme () {
         randomImage: "https://i.imgflip.com/9ehk.jpg"
     });
 
-    const [allMemeImages, setAllMemeImages] = useState(memesData)
+    const [allMemes, setAllMemes] = useState([])
+
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+    }, [])
 
     function getMemeImage() {
-        const memesArray = allMemeImages.data.memes;
-        const randomNumber = Math.floor(Math.random() * memesArray.length);
-        const url = memesArray[randomNumber].url
+        const randomNumber = Math.floor(Math.random() * allMemes.length);
+        const url = allMemes[randomNumber].url
         setMeme(prevMeme => ({
             ...prevMeme,
             randomImage: url
@@ -44,3 +49,5 @@ export default function Meme () {
         </main>
     );
 };
+
+export default Meme;
