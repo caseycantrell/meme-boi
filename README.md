@@ -1,1 +1,1 @@
-# Become a Memelord, easily.
+# Become a memelord, easily.
