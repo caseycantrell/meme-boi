@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import memesData from "../assets/memesData";
 
 function Meme () {
 
     const [meme, setMeme] = useState({
         topText: "",
         bottomText: "",
+        customUrl: "",
         randomImage: "https://i.imgflip.com/9ehk.jpg"
     });
 
@@ -22,9 +22,18 @@ function Meme () {
         const url = allMemes[randomNumber].url
         setMeme(prevMeme => ({
             ...prevMeme,
-            randomImage: url
+            randomImage: url,
+            customUrl: ""
         }));
     };
+
+    function setCustomImage() {
+        const url = meme.customUrl 
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            customUrl: url,
+        }))
+    }
 
     function handleChange(event) {
         const {name, value} = event.target
@@ -39,10 +48,12 @@ function Meme () {
             <div className="form">
                 <input type="text" placeholder="Top text" className="form--input" name="topText" value={meme.topText} onChange={handleChange} />
                 <input type="text" placeholder="Bottom text" className="form--input" name="bottomText" value={meme.bottomText} onChange={handleChange} />
+                <input type="text" placeholder="Custom Image URL" className="form--input" name="customUrl" value={meme.customUrl} onChange={handleChange} />
+                <button className="form--submit-button" onClick={setCustomImage}>Submit</button>
                 <button className="form--button" onClick={getMemeImage}>Random Image</button>
             </div>
             <div className="meme">
-                    <img src={meme.randomImage} className="meme--image" alt="meme" />
+                    <img src={meme.customUrl ? meme.customUrl : meme.randomImage} className="meme--image" alt="meme" />
                     <h2 className="meme--text top">{meme.topText}</h2>
                     <h2 className="meme--text bottom">{meme.bottomText}</h2>
                 </div>
