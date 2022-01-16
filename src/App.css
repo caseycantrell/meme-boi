@@ -45,9 +45,11 @@ main {
 .header--name {
   font-size: 30px;
   margin-right: auto;
+  font-family: impact;
 }
 
 .header--title {
+  font-family: impact;
   font-size: 20px;
   font-weight: 500;
   margin-right: 10px;
@@ -55,7 +57,7 @@ main {
 
 .form {
   display: grid;
-  grid-template: 40px 40px / 1fr 1fr;
+  grid-template: 40px 40px 40px 40px/ 1fr;
   gap: 17px;
   padding-bottom: 17px;
 }
@@ -69,12 +71,22 @@ main {
 
 .form--button {
   grid-column: 1 / -1;
-  font-family: "Karla", sans-serif;
+  font-family: "impact", sans-serif;
+  font-size: 14px;
   border-radius: 5px;
-  background: linear-gradient(90deg, #03a172 1.18%, #025038 100%);
+  background: linear-gradient(180deg, #000000 1.18%, #00b67f 100%);
+  letter-spacing: 1px;
   color: white;
+  transition: all 1s;
   border: none;
   cursor: pointer;
+}
+.form--button:active {
+  transition: all 1s;
+  background: linear-gradient(90deg, #000000 1.18%, #00b67f 100%);
+  letter-spacing: 3px;
+  cursor: pointer;
+  opacity: 0.9;
 }
 
 .meme {

@@ -28,10 +28,9 @@ function Meme () {
     };
 
     function setCustomImage() {
-        const url = meme.customUrl 
         setMeme(prevMeme => ({
             ...prevMeme,
-            customUrl: url,
+            customUrl: meme.customUrl,
         }))
     }
 
@@ -48,8 +47,7 @@ function Meme () {
             <div className="form">
                 <input type="text" placeholder="Top text" className="form--input" name="topText" value={meme.topText} onChange={handleChange} />
                 <input type="text" placeholder="Bottom text" className="form--input" name="bottomText" value={meme.bottomText} onChange={handleChange} />
-                <input type="text" placeholder="Custom Image URL" className="form--input" name="customUrl" value={meme.customUrl} onChange={handleChange} />
-                <button className="form--submit-button" onClick={setCustomImage}>Submit</button>
+                <input type="text" placeholder="Custom Image URL" className="" name="customUrl" value={meme.customUrl} onChange={handleChange} />
                 <button className="form--button" onClick={getMemeImage}>Random Image</button>
             </div>
             <div className="meme">
