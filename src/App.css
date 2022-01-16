@@ -45,11 +45,11 @@ main {
 .header--name {
   font-size: 30px;
   margin-right: auto;
-  font-family: impact;
+  font-family: impact, sans-serif;
 }
 
 .header--title {
-  font-family: impact;
+  font-family: impact, sans-serif;
   font-size: 20px;
   font-weight: 500;
   margin-right: 10px;
@@ -71,7 +71,7 @@ main {
 
 .form--button {
   grid-column: 1 / -1;
-  font-family: "impact", sans-serif;
+  font-family: impact, sans-serif;
   font-size: 14px;
   border-radius: 5px;
   background: linear-gradient(180deg, #000000 1.18%, #00b67f 100%);
