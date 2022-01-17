@@ -27,8 +27,13 @@ main {
   padding: 36px;
 }
 
+.header, h1 {
+  text-align: center;
+}
+
 .header {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 100px;
   background: linear-gradient(90deg, #05c5b5 1.18%, #01796f 100%);
@@ -40,20 +45,12 @@ main {
 .header--image {
   height: 100%;
   margin-right: 30px;
-  margin-left: 10px;
+  filter: drop-shadow(0px 0px 2px #000000);
 }
 
 .header--name {
   font-size: 30px;
-  margin-right: auto;
-  font-family: Impact, sans-serif;
-}
-
-.header--title {
-  font-family: Impact, sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  margin-right: 10px;
+  text-align: center;
 }
 
 .form {
@@ -72,16 +69,16 @@ main {
 
 .form--button {
   grid-column: 1 / -1;
-  font-family: Impact, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 5px;
+  font-weight: 800;
   background: linear-gradient(180deg, #000000 1.18%, #05c5b5 100%);
-  letter-spacing: 1px;
   color: white;
   transition: all 1s;
   border: none;
   cursor: pointer;
-  filter: drop-shadow(0px 0px 2px #000000);
+  filter: drop-shadow(0px 0px 0.5px #000000);
+  padding-bottom: 4px;
 }
 .form--button:active {
   transition: all 1s;
