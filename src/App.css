@@ -1,7 +1,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .header--image {
-    animation: Header-img-spin infinite 10s linear;
+    animation: Header-img-spin infinite 4s linear;
   }
 }
 
@@ -31,9 +31,10 @@ main {
   display: flex;
   align-items: center;
   height: 100px;
-  background: linear-gradient(90deg, #03a172 1.18%, #025038 100%);
+  background: linear-gradient(90deg, #05c5b5 1.18%, #01796f 100%);
   color: white;
   padding: 20px;
+  filter: drop-shadow(0px 0px 4px #000000);
 }
 
 .header--image {
@@ -74,17 +75,17 @@ main {
   font-family: Impact, sans-serif;
   font-size: 14px;
   border-radius: 5px;
-  background: linear-gradient(180deg, #000000 1.18%, #00b67f 100%);
+  background: linear-gradient(180deg, #000000 1.18%, #05c5b5 100%);
   letter-spacing: 1px;
   color: white;
   transition: all 1s;
   border: none;
   cursor: pointer;
+  filter: drop-shadow(0px 0px 2px #000000);
 }
 .form--button:active {
   transition: all 1s;
-  background: linear-gradient(90deg, #000000 1.18%, #00b67f 100%);
-  letter-spacing: 3px;
+  background: linear-gradient(90deg, #000000 1.18%, #05c5b5 100%);
   cursor: pointer;
   opacity: 0.9;
 }
