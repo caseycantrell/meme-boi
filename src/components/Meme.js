@@ -32,13 +32,6 @@ function Meme () {
         }));
     };
 
-    function setCustomImage() {
-        setMeme(prevMeme => ({
-            ...prevMeme,
-            customUrl: meme.customUrl,
-        }))
-    }
-
     function handleChange(event) {
         const {name, value} = event.target
         setMeme(prevMeme => ({
