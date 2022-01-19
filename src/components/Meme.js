@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 
 function Meme () {
 
-    const [meme, setMeme] = useState({
+    const [meme, setMeme] = useState(
+        () => JSON.parse(localStorage.getItem("meme")) || {
         topText: "",
         bottomText: "",
         customUrl: "",
@@ -10,6 +11,10 @@ function Meme () {
     });
 
     const [allMemes, setAllMemes] = useState([])
+
+    useEffect(() => {
+        localStorage.setItem("meme", JSON.stringify(meme))
+    }, [meme])
 
     useEffect(() => {
         fetch("https://api.imgflip.com/get_memes")
