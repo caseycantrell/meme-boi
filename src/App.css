@@ -114,11 +114,11 @@ main {
   transform: translateX(-50%);
   margin: 15px 0;
   padding: 0 5px;
-  font-family: impact, sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: 2em;
   text-transform: uppercase;
   color: white;
-  letter-spacing: 3px;
+  letter-spacing: 3.25px;
   text-shadow:
     2px 2px 0 #000,
     -2px -2px 0 #000,
