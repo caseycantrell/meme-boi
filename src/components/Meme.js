@@ -46,7 +46,7 @@ function Meme () {
                 <input type="text" placeholder="Top text" className="form--input" name="topText" value={meme.topText} onChange={handleChange} />
                 <input type="text" placeholder="Bottom text" className="form--input" name="bottomText" value={meme.bottomText} onChange={handleChange} />
                 <input type="text" placeholder="Custom Image URL" className="form--input" name="customUrl" value={meme.customUrl} onChange={handleChange} />
-                <button className="form--button" onClick={getMemeImage}>random image &nbsp;&nbsp;&#128444;&#65039;</button>
+                <span><button className="form--button" onClick={getMemeImage}>RANDOM IMAGE&nbsp;&nbsp;&nbsp;&#128444;&#65039;</button></span>
             </div>
             <div className="meme">
                     <img src={meme.customUrl ? meme.customUrl : meme.randomImage} className="meme--image" alt="meme" />
