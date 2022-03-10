@@ -1,7 +1,7 @@
 # Become a memelord, easily.
 
 
-Check out the deployed version [here](https://memeboi.netlify.app).
+Check out the deployed version [here](https://memeboi.netlify.app). Note: this was intended to be used/viewed on a mobile device.
 
 ---
 
